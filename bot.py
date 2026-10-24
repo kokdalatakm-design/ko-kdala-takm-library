@@ -20,7 +20,7 @@ from telegram.ext import (
 )
 
 # ================= SOZLAMALAR =================
-TOKEN = "8586560716:AAEpWQeMCe7_slIm3xQ05w9nd99ehu9ZPDE"
+TOKEN = "8586560716:AAGJdMpGVLLsuQrMPWKWqFxMB6ZqeFMHw2o"
 ADMIN_ID = 5528462848
 
 ADD_PDF, ADD_TITLE, ADD_AUTHOR = range(3)
