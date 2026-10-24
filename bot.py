@@ -205,3 +205,51 @@ if __name__ == '__main__':
 
     print("Bot muvaffaqiyatli ishga tushdi...")
     app.run_polling()
+from telegram import InlineKeyboardButton, InlineKeyboardMarkup
+
+
+async def ijtimoiy_tarmoqlar(update, context):
+    keyboard = [
+        [
+            InlineKeyboardButton(
+                "📷 Instagram",
+                url="https://www.instagram.com/kokdala_tak_?rpxt=MXE4MGNlbnVobGs4bA==",
+            )
+        ],
+        [
+            InlineKeyboardButton(
+                "✈️ Telegram kanal",
+                url="https://t.me/Kukdalaaxborotkutubxonamarkazi",
+            )
+        ],
+        [
+            InlineKeyboardButton(
+                "👥 Telegram guruh", url="https://t.me/+ULmvcu0CB4owMjQy"
+            )
+        ],
+        [
+            InlineKeyboardButton(
+                "📘 Facebook",
+                url="https://www.facebook.com/share/1FRMC3XvyA/",
+            )
+        ],
+        [
+            InlineKeyboardButton(
+                "🐦 Twitter (X)", url="https://x.com/KokdalaTAKM"
+            )
+        ],
+        [
+            InlineKeyboardButton(
+                "🎬 YouTube", url="https://www.youtube.com/@KokdalaTAKM-t2v"
+            )
+        ],
+    ]
+    reply_markup = InlineKeyboardMarkup(keyboard)
+
+    await update.message.reply_text(
+        "📚 **Ko'kdala tuman axborot-kutubxona markazi**\n\n"
+        "Bizning rasmiy sahifalarimiz:",
+        reply_markup=reply_markup,
+        parse_mode="Markdown",
+    )
+
