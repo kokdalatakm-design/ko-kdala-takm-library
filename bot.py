@@ -17,7 +17,7 @@ from telegram.ext import (
     filters,
 )
 
-# ==========================================
+# ================= SOZLAMALAR =================
 TOKEN = "8586560716:AAEpWQeMCe7_slIm3xQ05w9nd99ehu9ZPDE"
 ADMIN_ID = 5528462848
 
@@ -182,7 +182,7 @@ async def barcha_kitoblar(update: Update, context: ContextTypes.DEFAULT_TYPE):
     )
 
 
-# Kitob yuborish (Inline button bosilganda)
+# Kitob yuborish
 async def send_book(update: Update, context: ContextTypes.DEFAULT_TYPE):
     query = update.callback_query
     await query.answer()
@@ -266,7 +266,6 @@ async def cancel(update: Update, context: ContextTypes.DEFAULT_TYPE):
 def main():
     application = ApplicationBuilder().token(TOKEN).build()
 
-    # Conversation handler (Kitob qo'shish)
     conv_handler = ConversationHandler(
         entry_points=[
             MessageHandler(
@@ -307,7 +306,7 @@ def main():
         MessageHandler(filters.Text("📞 Aloqa"), aloqa)
     )
 
-    # Inline Button Query Handler
+    # Callback Query
     application.add_handler(CallbackQueryHandler(send_book, pattern="^book_"))
 
     print("Bot ishga tushdi...")
