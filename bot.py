@@ -252,4 +252,8 @@ async def ijtimoiy_tarmoqlar(update, context):
         reply_markup=reply_markup,
         parse_mode="Markdown",
     )
+application.add_handler(CommandHandler("tarmoqlar", ijtimoiy_tarmoqlar))
+application.add_handler(
+    MessageHandler(filters.Text("🌐 Ijtimoiy tarmoqlar"), ijtimoiy_tarmoqlar)
+)
 
